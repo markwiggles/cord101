@@ -1,0 +1,13 @@
+{{model.viewport.width}} {{model.viewport.height}}
+
+<style type="text/css">
+.my-list  {
+	height: 627px;;
+}
+</style>
+
+<div style="width:{{model.viewport.width}};height:{{model.viewport.height}};margin:auto;background-color:lightgrey;">
+	{{#ember-collection class='my-list' items=model.listData height=model.viewport.height width=model.viewport.width cell-layout=(fixed-grid-layout 350 50) as |item index| }}
+		<p style="margin:20px;color: blue;">This is {{item.name}}</p>
+	{{/ember-collection}}
+</div>
